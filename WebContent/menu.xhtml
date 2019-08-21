@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+	<title>Menu</title>
+	<style>
+.button-menu {
+	background-color: #333;
+	border: none;
+	color: white;
+	padding: 15px 125px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}
+s
+</style>
+
+	<link rel="stylesheet"
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+		crossorigin="anonymous"></link>
+</h:head>
+<h:body class="bg-menu container justify-content-center">
+	<h4 class="h4">Menu</h4>
+	<nav class="navbar navbar-dark bg-dark">
+		<a class="navbar-brand" href="#">Auto Bicicletão</a>
+
+		<form class="form-inline"></form>
+	</nav>
+
+	<h:form class="form-inline">
+		<h:commandButton class="btn btn-outline-success" value="Login"
+			action="#{menuController.login}" />
+		<h:commandButton class="btn btn-outline-success"
+			value="Cadastrar Usuarios" action="#{menuController.cadastroUsuario}" />
+		<h:commandButton class="btn btn-outline-success"
+			value="Cadastrar Produtos"
+			action="#{menuController.cadastrarProduto}" />
+	</h:form>
+</h:body>
+</html>

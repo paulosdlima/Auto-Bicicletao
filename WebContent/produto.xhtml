@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+
+
+	<link rel="stylesheet"
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+		crossorigin="anonymous"></link>
+	<title>Cadastrar Produtos</title>
+</h:head>
+<h:body>
+	<section class="bg-light">
+		<h:form class="container d-flex col-md-8 flex-column">
+			<h1 class="text-center">Cadastro de Produto</h1>
+			<h:outputLabel value="Nome: " />
+			<h:inputText class="input-group-text" value="#{produtoController.produto.nome}" />
+			<h:outputLabel value="Categoria: " />
+			<h:inputText class="input-group-text" value="#{produtoController.produto.categoria}" />
+			
+			<h:outputLabel value="Ativo/Inativo " class="text-center my-2" />
+			<h:selectBooleanCheckbox value="#{produtoController.produto.status}" />
+
+			<div class="container p-2 d-flex col-8 justify-content-center">
+				<h:commandButton class="btn btn-success mx-1" value="Incluir"
+					action="#{usuarioController.incluir}" />
+				<h:commandButton class="btn btn-warning mx-1" value="Alterar" />
+				<h:commandButton type="reset" class="btn btn-secondary mx-1" value="Limpar"
+					action="#{usuarioController.limpar}" />
+				<h:commandButton class="btn btn-danger mx-1" value="Excluir" />
+		
+			</div>
+		</h:form>
+	</section>
+</h:body>
+</html>
